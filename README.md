@@ -43,7 +43,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 2. Select the KCVPC and enter the following details:
    - Name: PublicSubnet
    - IPv4 CIDR block: 10.0.1.0/24
-   - Availability Zone: eu-west-1a (or any available AZ in your region)
+   - Availability Zone: us-east-1a (or eu-west-1a)
 3. Click "Create subnet"
 
 ### Private Subnet
@@ -51,7 +51,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 1. Repeat the process with the following details:
    - Name: PrivateSubnet
    - IPv4 CIDR block: 10.0.2.0/24
-   - Availability Zone: eu-west-1a (same as PublicSubnet for simplicity)
+   - Availability Zone: us-east-1a (or eu-west-1a)
 
 ![Subnet Creation](Markdown/subnet_creation.png)
 
@@ -62,7 +62,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 3. Select the newly created IGW and click "Actions" > "Attach to VPC"
 4. Select KCVPC and click "Attach"
 
-![IGW Attachment](Markdown/IGW_Attachment.Png)
+![IGW Attachment](Markdown/IGW_attachment.Png)
 
 ## 4. Route Table Configuration
 
@@ -107,7 +107,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 5. Inbound rules:
    - Allow HTTP (port 80) from anywhere (0.0.0.0/0)
    - Allow HTTPS (port 443) from anywhere (0.0.0.0/0)
-   - Allow SSH (port 22) from your IP (e.g., 203.0.113.0/32)
+   - Allow SSH (port 22) from your computer IP address
 6. Outbound rules:
    - Allow all traffic to anywhere (0.0.0.0/0)
 
@@ -131,7 +131,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 4. Add inbound rules:
    - Allow HTTP (port 80) from 0.0.0.0/0
    - Allow HTTPS (port 443) from 0.0.0.0/0
-   - Allow SSH (port 22) from your IP
+   - Allow SSH (port 22) from your computer IP address
    - Allow ephemeral ports (1024-65535) from 0.0.0.0/0
 5. Add outbound rules:
    - Allow all traffic to 0.0.0.0/0
