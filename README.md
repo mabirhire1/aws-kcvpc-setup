@@ -175,7 +175,7 @@ This README documents the process of setting up a Virtual Private Cloud (VPC) in
 
 ![EC2 Deployment](Markdown/ec2_deployment.png)
 
-![VPC Architecture Diagram](Markdown/VPC_architecture_diagram.jpg)
+![VPC Architecture Diagram](Markdown/KCVPC_Architecture_Diagram.JPG)
 
 ## 10. Component Explanations
 
